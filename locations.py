@@ -1,3 +1,4 @@
+from entities import *
 from res.location import Location
 
 #Farmstead Location
@@ -52,18 +53,18 @@ You can see huge footprints a head of you, it looks like the Orcs
 stomped straight through this beautiful wood."""
 
 #Iron Pine Forest
-iron_pine_forest = Locatopn()
+iron_pine_forest = Location()
 iron_pine_forest.name = "Iron Pine Forest"
 iron_pine_forest.description = """
 A dense forest lies before you. Its dark depths become quickly
 impenetrable to your eyes. You can hear a skittering in the darkness
-and a heavy flapping of learthery wings. The trees are gnarled and 
+and a heavy flapping of leathery wings. The trees are gnarled and
 sharp looking. There is a narrow, overgrown path in front of you and
 no sign that the Orcs have disturbed this haunted ground ..."""
 
 #Literary Lake
 literary_lake = Location()
-literary_lake.name - "Literary Lake"
+literary_lake.name = "Literary Lake"
 literary_lake.description = """
 The landscape opens up before you to reveal a sparkling blue
 lake. You can see into its crystal depths and admire all the 
