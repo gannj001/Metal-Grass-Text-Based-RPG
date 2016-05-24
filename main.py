@@ -6,15 +6,9 @@ from res.game import Game
 g = Game()
 g.character = Character()
 
-#mapX = 5
-#mapY = 5
-
-#m = MapFactory.make_map(mapX, mapY)
-
-#Set up the character
 
 name = ""
-while name  == "":
+while name == "":
     name = input("What is your name, brave adventurer: ")
 
 g.character.name = name
@@ -24,9 +18,9 @@ g.character.armour = farming_clothes
 
 g.printintro()
 
-#test code
-#print(g.character.location.name)
-#end test
+# test code
+# print(g.character.location.name)
+# end test
 g.playing = True
 
 while g.playing:
