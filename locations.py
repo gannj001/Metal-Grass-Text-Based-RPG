@@ -127,7 +127,36 @@ real thing! Looking closer, you notice some of the toadstools look
 severly damaged - as though hacked at with an axe or halberd. You wouldn't
 be surprised if the Orcs had passed through here."""
 
-#
+#Metal Mountains
+metal_mountains = Location()
+metal_mountains.name = "Metal Mountains"
+metail.mountains.description = """
+The Pass has led you deep into the heart of the Metal Mountains. Giant
+shards of dark metal loom above you and the air, fierce and cold, bites 
+any exposed skin. Snow is being whipped around you, cutting at your cheeks 
+and obscuring your vision.  You are going to have to be very careful as 
+you journey deeper into these treacherous mountains."""
+
+#North Greatown
+north_greatown = Location()
+north_greatown.name = "North Greatown"
+north_greatown.description = """
+You have ambled upon Greatown, a bustling settlement filled with businesses
+and shops. You are currently in North Greatown, a largely residential area.
+Cottages are lined up in neat rows, not a thatch out of place. The people of 
+Greatown do not allow mess. They do have a fantastic tavern though, The Gnome's
+Behind, maybe you can find out about the Orcs in there?"""
+
+#South Greatown
+south_greatown = Location()
+south_greatown.name = "South Greatown"
+south_greatown.description = """
+The southside of Greatown is largely made up of a vibrant and labrynthine 
+market place. Vendours here sell anything and everything. Maybe you should
+talk to a few? I hear the tea vendour always has the latest gossip (and the 
+latest in exotic tea imports). You could also checkout the graveyard on the 
+outskirts of town, rumour says that strange noises have been heard around that
+area at night."""
 
 #Connections
 #connections format:
@@ -172,3 +201,15 @@ literary_lake.connect_west(toadstool_farm)
 
 toadstool_farm.connect_north(chequered_plains)
 chequered_plains.connect_south(toadstool_farm)
+
+metal_mountains.connect_south(the_pass)
+the_pass.connect_north(metal_mountains)
+
+north_greatown.connect_north(literary_lake)
+literary_lake.connect_south(north_greatown)
+
+north_greatown.connect_east(bronze_oak_wood)
+bronze_oak_wood.connect_west(north_greatown)
+
+south_greatown.connect_north(north_greatown)
+north_greatown.connect_south(south_greatown)
