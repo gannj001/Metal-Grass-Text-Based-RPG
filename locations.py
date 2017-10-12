@@ -1,5 +1,5 @@
 from res.location import Location
-from .entity import *
+from entities import *
 
 #Farmstead Location
 farmstead = Location()
@@ -100,7 +100,7 @@ like you have just missed the Orcs. Be careful ..."""
 
 #Chequered Plains
 chequered_plains = Location()
-chequered_plains.name = Chequered Plains
+chequered_plains.name = "Chequered Plains"
 chequered_plains.description = """ 
 The Chequered Plains was planted on the whim of the Old King. He wanted
 somewhere to play a giant chess match. Farmers and architects worked
@@ -130,7 +130,7 @@ be surprised if the Orcs had passed through here."""
 #Metal Mountains
 metal_mountains = Location()
 metal_mountains.name = "Metal Mountains"
-metail.mountains.description = """
+metal_mountains.description = """
 The Pass has led you deep into the heart of the Metal Mountains. Giant
 shards of dark metal loom above you and the air, fierce and cold, bites 
 any exposed skin. Snow is being whipped around you, cutting at your cheeks 

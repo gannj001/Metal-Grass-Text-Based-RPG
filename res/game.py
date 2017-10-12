@@ -6,6 +6,7 @@ class Game:
         self.attack_tokens = ["attack"]
         self.investigate_tokens = ["describe", "look"]
         self.quit_tokens = ["quit", "stop", "exit"]
+        self.help_tokens = ["?", "help"]
 
     def process_command(self, command):
         tokens = self.tokenise(command)
@@ -21,9 +22,21 @@ class Game:
             status_line += self.parse_describe(tokens)
         elif tokens[0] in self.quit_tokens:
             status_line += self.handle_quit()
+        elif tokens[0] in self.help_tokens:
+            status_line += self.handle_help()
 
         if len(status_line) == 0:
             status_line = "Not able to process that command.  Yet..."
+        return status_line
+
+    def handle_help(self):
+        status_line = """
+        CURRENT COMMANDS
+        Attack Commands --> {}
+        Look Commands   --> {}
+        Move Commands   --> {}
+        Quit Commands   --> {}
+        Help Commands   --> {}""".format(self.attack_tokens, self.investigate_tokens, self.travel_tokens, self.quit_tokens, self.help_tokens)
         return status_line
 
     def move_player(self, location):
